@@ -3501,8 +3501,9 @@ sub lineMapModeInitialize {
 
     # Create more ascii friendly line labels.
     foreach my $line (@lineMapLines) {
-        $line =~ s/\s/_/g;
-        push @lineMapLineLabels, $line;
+	my $label = $line;
+        $label =~ s/\s/_/g;
+        push @lineMapLineLabels, $label;
     }
 
 }
